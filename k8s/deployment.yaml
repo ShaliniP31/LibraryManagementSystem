@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: rainbear-library
-          image: rainbear-library:latest
+          image: shalini31/rainbear-library:latest
           # Image that will be used to containers in the cluster
           imagePullPolicy: IfNotPresent
           ports:
