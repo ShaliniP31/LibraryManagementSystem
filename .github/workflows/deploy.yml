@@ -1,4 +1,4 @@
-name: CI/CD UmbracoSite to IIS
+name: Build and Push Docker Image
 
 on:
   push:
@@ -41,3 +41,10 @@ jobs:
           push: true
           #Change image-name
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/rainbear-library:latest
+
+      - name: deploy to k8s
+        run:
+            #Your runner already has kubectl access to the local cluster
+          kubectl apply -f k8s/deployment.yaml
+          kubectl apply -f k8s/service.yaml
+
