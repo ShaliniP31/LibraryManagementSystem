@@ -45,6 +45,4 @@ jobs:
       - name: deploy to k8s
         run:
             #Your runner already has kubectl access to the local cluster
-          kubectl apply -f k8s/deployment.yaml
-          kubectl apply -f k8s/service.yaml
-
+          kubectl apply -f k8s/
