@@ -10,7 +10,7 @@ public interface BookMapper{
 
     BookDTO convertToBookDTO(Book book);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "addedDate", ignore = true)
+//    @Mapping(target = "id", ignore = true)
+//    @Mapping(target = "addedDate", ignore = true)
     Book convertToBook(BookDTO bookDTO);
 }
